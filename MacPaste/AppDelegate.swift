@@ -30,6 +30,7 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSTableViewDelegate {
             Copys = []
         }
         tableview.action = #selector(AppDelegate.singleaction)
+        Show = false
     }
     
     @objc func showhide() {
