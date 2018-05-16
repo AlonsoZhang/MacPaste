@@ -454,7 +454,8 @@
                                             </menu>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="nBv-pT-iUY"/>
-                                        <menuItem title="Show Colors" keyEquivalent="C" id="led-KW-BLe">
+                                        <menuItem title="Show Colors" id="led-KW-BLe">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <action selector="orderFrontColorPanel:" target="-1" id="IYa-Je-PaB"/>
                                             </connections>
@@ -653,7 +654,7 @@ DQ
                                 </connections>
                             </menuItem>
                             <menuItem title="Clear" keyEquivalent="C" id="xOo-QS-cH1">
-                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <modifierMask key="keyEquivalentModifierMask" shift="YES" command="YES"/>
                                 <connections>
                                     <action selector="clearhistory:" target="Voe-Tx-rLC" id="ybA-va-nfw"/>
                                 </connections>
@@ -683,7 +684,7 @@ DQ
             </connections>
         </customObject>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
-        <window title="Clear History:Shift+C" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" animationBehavior="alertPanel" frameAutosaveName="" titlebarAppearsTransparent="YES" id="HoW-Yu-NGL" customClass="NSPanel">
+        <window title="Clear History:⇧⌘C" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" animationBehavior="alertPanel" frameAutosaveName="" titlebarAppearsTransparent="YES" id="HoW-Yu-NGL" customClass="NSPanel">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" utility="YES" HUD="YES"/>
             <windowCollectionBehavior key="collectionBehavior" canJoinAllSpaces="YES"/>
             <rect key="contentRect" x="0.0" y="0.0" width="300" height="300"/>

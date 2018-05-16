@@ -31,15 +31,16 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSTableViewDelegate {
         }
         tableview.action = #selector(AppDelegate.singleaction)
         Show = false
+        window.hidesOnDeactivate = true
     }
     
     @objc func showhide() {
-        if Show {
-            Show = false
-        }else{
+//        if Show {
+//            Show = false
+//        }else{
             Show = true
             NSRunningApplication.current.activate(options: [.activateAllWindows,.activateIgnoringOtherApps])
-        }
+        //}
     }
     
     @objc func checkPasteboard() {
@@ -53,6 +54,7 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSTableViewDelegate {
                         }
                     }
                     Copys.insert(["Copy":lastPasteboard], at: 0)
+                    tableview.selectRowIndexes(IndexSet(integer: 0), byExtendingSelection: false)
                 }
             }else{
                 Copys.insert(["Copy":lastPasteboard], at: 0)
@@ -75,7 +77,7 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSTableViewDelegate {
             Copys.remove(at: selectInt)
             NSPasteboard.general.clearContents()
             NSPasteboard.general.writeObjects([copyinfo! as NSPasteboardWriting])
-            showhide()
+            Show = false
             //control+F4,获取之前活动窗口
             press(functionkey: "control", keynum: 118)
             //command+v,粘贴
